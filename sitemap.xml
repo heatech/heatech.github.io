@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://heatech.github.io/2015/09/05/%E4%B8%BA%E4%BB%80%E4%B9%88hexo/</loc>
+    <lastmod>2015-09-16T06:04:16.015Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://heatech.github.io/links/index.html</loc>
     <lastmod>2015-09-14T16:54:32.000Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://heatech.github.io/2015/09/06/%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8Bitnami%E8%99%9A%E6%9C%BA%E7%89%88%E6%9C%AC%E7%9A%84redmine/</loc>
     <lastmod>2015-09-14T08:47:08.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://heatech.github.io/2015/09/05/%E4%B8%BA%E4%BB%80%E4%B9%88hexo/</loc>
-    <lastmod>2015-09-14T08:31:48.000Z</lastmod>
   </url>
   
   <url>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[ITRunner's备忘录]]></title>
+  <title><![CDATA[heatech's blog]]></title>
   <subtitle><![CDATA[事情太多，记不住的都记下来。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://heatech.github.io/"/>
@@ -201,7 +201,7 @@
     <link href="http://heatech.github.io/2015/09/05/%E4%B8%BA%E4%BB%80%E4%B9%88hexo/"/>
     <id>http://heatech.github.io/2015/09/05/为什么hexo/</id>
     <published>2015-09-05T05:23:38.000Z</published>
-    <updated>2015-09-14T08:31:48.000Z</updated>
+    <updated>2015-09-16T06:04:16.015Z</updated>
     <content type="html"><![CDATA[<p>hexo是一个基于nodejs的强大博客系统。令人骄傲的是其作者是台湾学生，所以系统对于中文字符支持的比较好。从 <a href="https://github.com/hexojs/hexo/commits/" target="_blank" rel="external">github</a> 上查到最早的一次提交与2012年9月10日，到现在不过3年时间，其发展速度很快。2015年3月5日发布了最新的3.0版本，其<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">插件</a>、<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a>也有很多。</p>
 <h2 id="准备">准备</h2><p>如果想使用hexo写博客，至少要了解以下一点点技术：</p>
 <ul>
@@ -257,6 +257,8 @@
 </li>
 <li><a href="http://catx.me/2014/03/12/hexo-uml-tag-plugin/" target="_blank" rel="external">Hexo UML插件</a></li>
 <li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a>，静态网站访问量计数</li>
+<li><a href="http://lukang.me/2014/hexo-qiniu.html" target="_blank" rel="external">部署 Hexo 静态博客至七牛</a></li>
+<li><a href="http://lukang.me/2015/optimization-of-hexo-2.html" target="_blank" rel="external">Hexo 优化与定制(二)</a>，添加搜索</li>
 </ul>
 <h2 id="使用经验">使用经验</h2><ol>
 <li><code>hexo d -g</code>命令等于<code>hexo generate</code> + <code>hexo deploy</code></li>
