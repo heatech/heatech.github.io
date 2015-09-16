@@ -1,0 +1,777 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="hexo,nodejs," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ITRunner's备忘录" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="hexo是一个基于nodejs的强大博客系统。令人骄傲的是其作者是台湾学生，所以系统对于中文字符支持的比较好。从 github 上查到最早的一次提交与2012年9月10日，到现在不过3年时间，其发展速度很快。2015年3月5日发布了最新的3.0版本，其插件、主题也有很多。
+准备如果想使用hexo写博客，至少要了解以下一点点技术：
+
+nodejs，一切自动化命令都依赖与他，世界的根基。
+npm，安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么hexo">
+<meta property="og:url" content="http://heatech.github.io/2015/09/05/为什么hexo/index.html">
+<meta property="og:site_name" content="ITRunner's备忘录">
+<meta property="og:description" content="hexo是一个基于nodejs的强大博客系统。令人骄傲的是其作者是台湾学生，所以系统对于中文字符支持的比较好。从 github 上查到最早的一次提交与2012年9月10日，到现在不过3年时间，其发展速度很快。2015年3月5日发布了最新的3.0版本，其插件、主题也有很多。
+准备如果想使用hexo写博客，至少要了解以下一点点技术：
+
+nodejs，一切自动化命令都依赖与他，世界的根基。
+npm，安装">
+<meta property="og:updated_time" content="2015-09-14T08:31:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为什么hexo">
+<meta name="twitter:description" content="hexo是一个基于nodejs的强大博客系统。令人骄傲的是其作者是台湾学生，所以系统对于中文字符支持的比较好。从 github 上查到最早的一次提交与2012年9月10日，到现在不过3年时间，其发展速度很快。2015年3月5日发布了最新的3.0版本，其插件、主题也有很多。
+准备如果想使用hexo写博客，至少要了解以下一点点技术：
+
+nodejs，一切自动化命令都依赖与他，世界的根基。
+npm，安装">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 为什么hexo | ITRunner's备忘录 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?077d1254ddc1559afd253ecfa6bda5b5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">ITRunner's备忘录</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links" rel="section">
+            <i class="menu-item-icon icon-next-links"></i> <br />
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              为什么hexo
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-05T13:23:38+08:00" content="2015-09-05">
+            2015-09-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/开发工具/" itemprop="url" rel="index">
+                  <span itemprop="name">开发工具</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/09/05/为什么hexo/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/05/为什么hexo/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>hexo是一个基于nodejs的强大博客系统。令人骄傲的是其作者是台湾学生，所以系统对于中文字符支持的比较好。从 <a href="https://github.com/hexojs/hexo/commits/" target="_blank" rel="external">github</a> 上查到最早的一次提交与2012年9月10日，到现在不过3年时间，其发展速度很快。2015年3月5日发布了最新的3.0版本，其<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">插件</a>、<a href="https://hexo.io/themes/" target="_blank" rel="external">主题</a>也有很多。</p>
+<h2 id="准备">准备</h2><p>如果想使用hexo写博客，至少要了解以下一点点技术：</p>
+<ul>
+<li><a href="https://nodejs.org" target="_blank" rel="external">nodejs</a>，一切自动化命令都依赖与他，世界的根基。</li>
+<li>npm，安装nodejs时会自动安装好这个。nodejs的包管理命令，使用它可以安装上hexo。</li>
+<li>hexo，使用这个命令可以完成初始化博客、新建、发布等操作。</li>
+<li>Markdown，对于程序猿来说，不懂Markdown就像不会使用Word，无法与人交流。</li>
+<li>github，最后你的博客要发布于此，各种主题也是从这里clone下来的。</li>
+<li><a href="https://github.com/tj/ejs" target="_blank" rel="external">ejs</a>，如果你想修改主题，或者新建主题里的网页模板，懂得Embedded JavaScript templates。</li>
+<li><a href="http://paularmstrong.github.io/swig/" target="_blank" rel="external">Swig</a>，好吧，有的主题还是使用的Swig当作模板</li>
+<li><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">stylus</a>，如果你想修改主题，或者新建主题里的样式，需要懂得stylus.</li>
+</ul>
+<p>看到这么多技术，是不是感受到一股弄弄的geek风呢，绝对值得你把玩上几天。</p>
+<a id="more"></a>
+<h2 id="为什么hexo">为什么hexo</h2><p>说到这里，还没有切入正题，什么要使用hexo当作博客系统呢。其实上面已经谈到了一部分，当然就是：hexo是为geek准备的。另外，由于其本质是发布后生成纯静态网页，所以会附带更多的好处，借用<a href="http://equation85.github.io/blog/blog-with-github-and-jekyll/" target="_blank" rel="external">equation85</a>的话说：</p>
+<blockquote>
+<ul>
+<li>可以在各种文字编辑器中通过Markdown或者Textile来写博文。</li>
+<li>可以在本地预览博客。</li>
+<li>写作无需Internet连接。</li>
+<li>可以通过Git进行发布。</li>
+<li>可以在静态Web服务器上构建博客站点。</li>
+<li>可以通过Github Pages服务免费构建博客。</li>
+<li>无需数据库。</li>
+</ul>
+</blockquote>
+<p>另外，吸引我的还离不开众多为hexo定制的主题，例如：</p>
+<ul>
+<li>Pacman</li>
+<li><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">Jacman</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a></li>
+</ul>
+<p>这些主题不仅样式优雅，并且功能强大。特别是由于这些主题的作者都是国人，所以默认集成了像百度统计、多说评论等功能。很时髦。</p>
+<p>使用Markdown书写有很大好处，现在已经有很多基于Markdown的独立博客系统，例如<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>。值得一提的是，简书在iOS客户端的字体样式很好看。</p>
+<h2 id="独立精神">独立精神</h2><p>很赞同<a href="http://wuchong.me/" target="_blank" rel="external">WuChong</a>在 <a href="http://wuchong.me/blog/2013/12/13/hello-%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">Hello独立博客</a> 中谈到的：</p>
+<blockquote>
+<ol>
+<li>独立，自由，简洁。不会像某些平台上的博客一样，广告乱飞。</li>
+<li>够酷。能有一个专属自己的域名。即使是heatech.github.com，那也不是我的，那是在别人的地上种菜。一定要heatech.me，那才是自家的地（虽然本质上仍然不是我的，但门面上是）。</li>
+<li>回馈精神。就像开源软件，我们不断地从开源社区获得那么多的便利与知识，当然也要回馈社区。</li>
+<li>成长的记录。即时你现在分享的是别人耻笑的水文，那又如何。在分享的过程中，已经远远超过那些人了。</li>
+</ol>
+</blockquote>
+<h2 id="部署教程">部署教程</h2><p>最后，对于hexo安装使用教程网上也很多，这里我就不重复造轮子了，以下是推荐的教程。</p>
+<ul>
+<li><a href="http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a>，比较全面的介绍github和hexo的部署教程。另外博主的其他文章也很值得一读。</li>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a>，介绍了目录的基本结构，和一些插件和工具。</li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">安装和使用NexT主题</a></li>
+<li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Zippera’s Hexo系列教程</a><ul>
+<li>主要是针对light主题</li>
+<li>可以将hexo部署到国内的 <a href="http://zipperary.com/2013/11/23/hexo-to-gitcafe/" target="_blank" rel="external">gitcafe</a> 或者 <a href="http://zipperary.com/2013/11/13/blog-to-stdyun/" target="_blank" rel="external">STDYUN</a> 服务。甚至在<a href="http://zipperary.com/2015/01/16/gitcafe-subdomain/" target="_blank" rel="external">gitcafe上创建多个page服务</a></li>
+</ul>
+</li>
+<li><a href="http://catx.me/2014/03/12/hexo-uml-tag-plugin/" target="_blank" rel="external">Hexo UML插件</a></li>
+<li><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="external">不蒜子</a>，静态网站访问量计数</li>
+</ul>
+<h2 id="使用经验">使用经验</h2><ol>
+<li><code>hexo d -g</code>命令等于<code>hexo generate</code> + <code>hexo deploy</code></li>
+<li><code>hexo server --debug</code>可以开启调试信息，观察变化。目前发现<code>.md</code>文件保存的时候<code>hexo server</code>都会自动更新。</li>
+</ol>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/06/配置使用Bitnami虚机版本的redmine/" rel="prev">配置使用Bitnami虚机版本的redmine</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/03/Vim使用技巧/" rel="next">Vim使用技巧</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/09/05/为什么hexo/"
+     data-title="为什么hexo"
+     data-content=""
+     data-url="http://heatech.github.io/2015/09/05/为什么hexo/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/09/05/为什么hexo/"
+                   data-title="为什么hexo" data-url="http://heatech.github.io/2015/09/05/为什么hexo/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="heatech" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">heatech</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/heatech" target="_blank">github</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://wsgzao.github.io/" target="_blank">HelloDog</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.prokitty.com" target="_blank">貓邏輯BLOG</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么hexo"><span class="nav-number">2.</span> <span class="nav-text">为什么hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独立精神"><span class="nav-number">3.</span> <span class="nav-text">独立精神</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署教程"><span class="nav-number">4.</span> <span class="nav-text">部署教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用经验"><span class="nav-number">5.</span> <span class="nav-text">使用经验</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">heatech</span>
+  <span class="contents-copyright">
+      若无特殊说明，本站所有文章均为原创文章，并遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" target="_blank">CC BY-NC-SA 4.0 协议</a> 发布
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"heatech"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
