@@ -39,31 +39,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="配置文件默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
+<meta name="description" content="配置文件(MacOS)默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
 1vi ~/.vimrc
 .vimrc文件内容是
-123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler
-启动与文件导航启动Vim并且浏览当前目录文件
-1vim .">
+123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim使用技巧">
 <meta property="og:url" content="http://heatech.github.io/2015/09/03/useful-hint-for-vim/index.html">
 <meta property="og:site_name" content="heatech's blog">
-<meta property="og:description" content="配置文件默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
+<meta property="og:description" content="配置文件(MacOS)默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
 1vi ~/.vimrc
 .vimrc文件内容是
-123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler
-启动与文件导航启动Vim并且浏览当前目录文件
-1vim .">
-<meta property="og:updated_time" content="2015-09-18T13:26:11.451Z">
+123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler">
+<meta property="og:updated_time" content="2015-09-23T08:54:08.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim使用技巧">
-<meta name="twitter:description" content="配置文件默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
+<meta name="twitter:description" content="配置文件(MacOS)默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：
 1vi ~/.vimrc
 .vimrc文件内容是
-123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler
-启动与文件导航启动Vim并且浏览当前目录文件
-1vim .">
+123456&quot;语法高亮syntax on&quot;显示行号set number&quot;实现光标所在位置的行号和列号set ruler">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -272,14 +266,25 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="配置文件">配置文件</h2><p>默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：</p>
+        <span itemprop="articleBody"><h2 id="配置文件(MacOS)">配置文件(MacOS)</h2><p>默认情况下，Vim是不开启语法高亮的，开启语法高亮需要做如下操作：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.vimrc</span><br></pre></td></tr></table></figure>
 <p>.vimrc文件内容是</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"语法高亮</span><br><span class="line"></span><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"><span class="string">"显示行号</span><br><span class="line"></span><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"><span class="string">"实现光标所在位置的行号和列号</span><br><span class="line"></span><span class="keyword">set</span> ruler</span><br></pre></td></tr></table></figure>
-<h2 id="启动与文件导航">启动与文件导航</h2><p>启动Vim并且浏览当前目录文件</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>这个命令和在vim中使用 <code>:E</code> 命令是一样的。在浏览模式下可以依据提示使用以下命令</p>
+<h2 id="配置文件(Windows)">配置文件(Windows)</h2><p>Vim在windows中也有一个可视化客户端：gVim。但是首先于Windows平台的字体、编码格式等问题，需要进行重新配置才可以让Vim用的更舒服。</p>
+<ol>
+<li><p>为了能够自定义中文字体，首先需要在.vimrc中添加：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span></span><br><span class="line">" <span class="keyword">set</span> fileencodings = <span class="keyword">set</span> fenc</span><br><span class="line"><span class="keyword">set</span> fileencodings=utf-<span class="number">8</span>,gbk,gb18030,gk2312</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加以上那句话后，菜单有可能会变成乱码，继续设置：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">" 解决菜单乱码</span><br><span class="line"></span><span class="keyword">source</span> $VIMRUNTIME/delmenu.<span class="keyword">vim</span></span><br><span class="line"><span class="keyword">source</span> $VIMRUNTIME/<span class="keyword">menu</span>.<span class="keyword">vim</span></span><br><span class="line"><span class="string">" 解决consle输出乱码</span><br><span class="line"></span><span class="keyword">language</span> <span class="keyword">messages</span> zh_CN.utf-<span class="number">8</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以设置字体了，注意，这里需要分别设置不同字符集的字体</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">" Menlo字体和Microsoft_YaHei_Mono字体需要单独下载</span></span><br><span class="line"><span class="string">" 字体安装好后，通过控制面板-&gt;字体查看字体名称，需要将空格替换为`_`</span></span><br><span class="line"><span class="string">" 例如Microsoft YaHei Mono这里要叫作Microsoft_YaHei_Mono</span></span><br><span class="line"><span class="string">" 当然，使用系统自带的字体也可以，支持字体名为中文字符，但是不是所有的字体都可以。</span></span><br><span class="line">set guifont=Menlo:h11:cANSI</span><br><span class="line"><span class="string">" set guifontwide = set gfw</span></span><br><span class="line">set guifontwide=Microsoft_YaHei_Mono:h11:cGB2312</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>完整内容如下</strong><br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">filetype <span class="keyword">on</span> " filetype</span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span> " highlight</span><br><span class="line"><span class="keyword">set</span> number " linenumber</span><br><span class="line"><span class="keyword">set</span> ruler " <span class="keyword">set</span> color</span><br><span class="line"><span class="keyword">set</span> smartindent "设置智能缩进</span><br><span class="line"><span class="keyword">set</span> shortmess=atI "去掉欢迎界面</span><br><span class="line">colorscheme monokai "sublime的配色方案</span><br><span class="line"><span class="keyword">set</span> guifont=Menlo:h11:cANSI</span><br><span class="line"><span class="keyword">set</span> guifontwide=Microsoft_YaHei_Mono:h11:cGB2312</span><br><span class="line"><span class="keyword">set</span> tabstop=2 " 设置<span class="keyword">tab</span>键的宽度</span><br><span class="line"><span class="keyword">set</span> shiftwidth=2 " 换行时行间交错使用4个空格</span><br><span class="line"><span class="keyword">set</span> autoindent " 自动对齐</span><br><span class="line"><span class="keyword">set</span> backspace=2 " 设置退格键可用</span><br><span class="line"><span class="keyword">set</span> cindent shiftwidth=2 " 自动缩进4空格</span><br><span class="line"><span class="keyword">set</span> ai! " 设置自动缩进</span><br><span class="line"><span class="keyword">set</span> mouse=a " 启用鼠标</span><br><span class="line"><span class="keyword">set</span> incsearch " 查找book时，当输入/b时会自动找到</span><br><span class="line"><span class="keyword">set</span> hlsearch " 开启高亮显示结果</span><br><span class="line"><span class="keyword">set</span> incsearch " 开启实时搜索功能</span><br><span class="line"><span class="keyword">set</span> nowrapscan " 搜索到文件两端时不重新搜索</span><br><span class="line"><span class="keyword">set</span> nocompatible " 关闭兼容模式</span><br><span class="line"><span class="keyword">set</span> encoding=utf-8</span><br><span class="line"><span class="keyword">set</span> fileencodings=utf-8,gbk,gb18030,gk2312</span><br><span class="line">"解决菜单乱码</span><br><span class="line">source <span class="label">$VIMRUNTIME</span>/delmenu.vim</span><br><span class="line">source <span class="label">$VIMRUNTIME</span>/menu.vim</span><br><span class="line">"解决consle输出乱码</span><br><span class="line">language messages zh_CN.utf-8</span><br></pre></td></tr></table></figure></p>
+<h2 id="启动与文件导航">启动与文件导航</h2><p>启动Vim并且浏览当前目录文件<code>vim .</code>，这个命令和在vim中使用 <code>:E</code> 命令是一样的。在浏览模式下可以依据提示使用以下命令</p>
 <ul>
 <li><code>–</code> 到上级目录</li>
 <li><code>D</code> 删除文件（大写）</li>
@@ -311,6 +316,15 @@
 <li><code>a</code> 在光标后插入，<code>A</code> 在行末插入</li>
 <li><code>o</code> 在当前行之下新建行，<code>O</code> 在当前行之上新建行</li>
 <li><code>r</code> 替换当前字符，<code>R</code> 从当前字符开始替换</li>
+</ul>
+<h2 id="有用的网站">有用的网站</h2><ul>
+<li><a href="http://www.vim.org/" target="_blank" rel="external">www.vim.org</a>，官方网站</li>
+<li><a href="http://www.vimer.cn/" target="_blank" rel="external">Vimer的程序世界</a>，中文社区</li>
+<li><a href="http://jingyan.baidu.com/article/48206aeaf07f37216ad6b3a6.html" target="_blank" rel="external">Vim 命令图解</a>，百度百科上的基础命令解释</li>
+<li><a href="http://www.oschina.net/news/43167/130-essential-vim-commands" target="_blank" rel="external">超过 130 个你需要了解的 vim 命令</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_46dac66f010005kw.html" target="_blank" rel="external">普通人的编辑利器——Vim</a>，很好的入门教程</li>
+<li><a href="https://linuxtoy.org/archives/efficient-editing-with-vim.html" target="_blank" rel="external">高效率编辑器 VIM－操作篇，非常适合 VIM 新手</a></li>
+<li><a href="http://linux.vbird.org/linux_basic/0310vi.php" target="_blank" rel="external">鳥哥的 Linux 私房菜 - 第九章、vim 程式編輯器</a></li>
 </ul>
 </span>
       
@@ -492,7 +506,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件"><span class="nav-number">1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动与文件导航"><span class="nav-number">2.</span> <span class="nav-text">启动与文件导航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#光标移动"><span class="nav-number">3.</span> <span class="nav-text">光标移动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用编辑命令"><span class="nav-number">4.</span> <span class="nav-text">常用编辑命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件(MacOS)"><span class="nav-number">1.</span> <span class="nav-text">配置文件(MacOS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件(Windows)"><span class="nav-number">2.</span> <span class="nav-text">配置文件(Windows)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动与文件导航"><span class="nav-number">3.</span> <span class="nav-text">启动与文件导航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#光标移动"><span class="nav-number">4.</span> <span class="nav-text">光标移动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用编辑命令"><span class="nav-number">5.</span> <span class="nav-text">常用编辑命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有用的网站"><span class="nav-number">6.</span> <span class="nav-text">有用的网站</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
